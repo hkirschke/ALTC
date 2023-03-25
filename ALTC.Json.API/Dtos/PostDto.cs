@@ -2,6 +2,6 @@
 
 namespace ALTC.Infra.Json.API.Dtos;
 
-public class UserDto : UserModel
+public sealed class PostDto : PostModel
 {
 }

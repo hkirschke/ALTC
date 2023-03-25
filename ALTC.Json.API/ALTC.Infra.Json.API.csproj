@@ -8,7 +8,11 @@
 
   <ItemGroup>
     <Folder Include="Consts\" />
-    <Folder Include="Proxys\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>

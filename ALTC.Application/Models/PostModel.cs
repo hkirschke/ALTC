@@ -1,6 +1,6 @@
-﻿namespace ALTC.Infra.Json.API.Dtos;
+﻿namespace ALTC.Application.Models;
 
-public sealed class PostsDto
+public class PostModel
 {
     public int? UserId { get; set; }
     public int? Id { get; set; }
