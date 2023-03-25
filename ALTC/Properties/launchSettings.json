@@ -14,7 +14,8 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BASE_URL_JSON_PLACEHOLDER_API": "https://jsonplaceholder.typicode.com/"
       },
       "applicationUrl": "https://localhost:7094;http://localhost:5094",
       "dotnetRunMessages": true
