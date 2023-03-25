@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ALTC.Application\ALTC.Application.csproj" />
-    <ProjectReference Include="..\ALTC.Json.API\ALTC.Json.API.csproj" />
+    <ProjectReference Include="..\ALTC.Json.API\ALTC.Infra.Json.API.csproj" />
   </ItemGroup>
 
 </Project>
