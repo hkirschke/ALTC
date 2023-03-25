@@ -13,12 +13,12 @@ using System.Threading.Tasks;
 
 namespace ALTC.Infra.Json.API.Proxys;
 
-public sealed class JsonProxy
+public sealed class JsonPlaceHolderProxy
 {
     private readonly IHttpClientFactory _httpClientFactory;
     private readonly IMapper _mapper;
 
-    public JsonProxy(IHttpClientFactory httpClientFactory, IMapper mapper)
+    public JsonPlaceHolderProxy(IHttpClientFactory httpClientFactory, IMapper mapper)
     {
         _httpClientFactory = httpClientFactory;
         _mapper = mapper;
