@@ -21,7 +21,7 @@ public sealed class JsonPlaceHolderProxyTest
     }
 
     [TestMethod]
-    public void Must_Get_List_of_Users_Success()
+    public async void Must_Get_List_of_Users_Success()
     {
         //Arrange
         var usersMock = _fixture.CreateMany<UserModel>().ToList();
@@ -33,14 +33,14 @@ public sealed class JsonPlaceHolderProxyTest
         //Act
         var service = new JsonPlaceHolderProxy(httpClientFactoryMock.Object, _mapperFixture.Object.Mapper);
 
-        var response = service.GetAllUsersAsync(CancellationToken.None);
+        var response = await service.GetAllUsersAsync(CancellationToken.None);
 
         //Assert
         Assert.IsInstanceOfType(response, typeof(IList<UserModel>));
     }
 
     [TestMethod]
-    public void Must_Get_List_of_Posts_Success()
+    public async void Must_Get_List_of_Posts_Success()
     {
         //Arrange
         var usersMock = _fixture.CreateMany<PostModel>().ToList();
@@ -52,7 +52,7 @@ public sealed class JsonPlaceHolderProxyTest
         //Act
         var service = new JsonPlaceHolderProxy(httpClientFactoryMock.Object, _mapperFixture.Object.Mapper);
 
-        var response = service.GetAllPostsAsync(CancellationToken.None);
+        var response = await service.GetAllPostsAsync(CancellationToken.None);
 
         //Assert
         Assert.IsInstanceOfType(response, typeof(IList<PostModel>));
