@@ -57,4 +57,38 @@ public sealed class JsonPlaceHolderProxyTest
         //Assert
         Assert.IsInstanceOfType(response, typeof(IList<PostModel>));
     }
+
+    [TestMethod]
+    public async void Must_Get_List_of_Users_Error()
+    {
+        //Arrange
+        var usersMock = _fixture.CreateMany<UserModel>().ToList();
+
+        var httpClientFactoryMock = new HttpClientHelper(HttpClientNames.JsonApi)
+                  .SetupGet(Endpoints.GET_USERS, JsonSerializer.Serialize(usersMock), System.Net.HttpStatusCode.InternalServerError)
+                  .Build();
+
+        //Act
+        var service = new JsonPlaceHolderProxy(httpClientFactoryMock.Object, _mapperFixture.Object.Mapper); 
+
+        //Assert
+        await Assert.ThrowsExceptionAsync<HttpRequestException>(() => service.GetAllUsersAsync(CancellationToken.None)); 
+    }
+
+    [TestMethod]
+    public async void Must_Get_List_of_Posts_Error()
+    {
+        //Arrange
+        var usersMock = _fixture.CreateMany<PostModel>().ToList();
+
+        var httpClientFactoryMock = new HttpClientHelper(HttpClientNames.JsonApi)
+                  .SetupGet(Endpoints.GET_USERS, JsonSerializer.Serialize(usersMock), System.Net.HttpStatusCode.InternalServerError)
+                  .Build();
+
+        //Act
+        var service = new JsonPlaceHolderProxy(httpClientFactoryMock.Object, _mapperFixture.Object.Mapper); 
+
+        //Assert
+        await Assert.ThrowsExceptionAsync<HttpRequestException>(() => service.GetAllPostsAsync(CancellationToken.None));
+    }
 }

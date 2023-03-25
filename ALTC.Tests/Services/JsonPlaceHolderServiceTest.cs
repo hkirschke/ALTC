@@ -25,7 +25,7 @@ public sealed class JsonPlaceHolderServiceTest
         var usersMock = _fixture.CreateMany<UserModel>().ToList();
 
         _jsonPlaceHolderProxyMock
-            .Setup(_ => _.GetUsersAsync(CancellationToken.None))
+            .Setup(_ => _.GetAllUsersAsync(CancellationToken.None))
             .ReturnsAsync(usersMock);
 
         //Act
@@ -44,7 +44,7 @@ public sealed class JsonPlaceHolderServiceTest
         var usersMock = _fixture.CreateMany<PostModel>().ToList();
 
         _jsonPlaceHolderProxyMock
-            .Setup(_ => _.GetPostsAsync(CancellationToken.None))
+            .Setup(_ => _.GetAllPostsAsync(CancellationToken.None))
             .ReturnsAsync(usersMock);
 
         //Act
