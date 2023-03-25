@@ -7,4 +7,6 @@ public interface ICacheRepository
     Task<bool> RemoveAsync<T>(string cacheName);
 
     Task SetAsync<T>(string cacheName, T value, int hoursExpiration = 1);
+
+    Task CreateAsync<T>(string cacheName, T value, int hoursExpiration = 1);
 }

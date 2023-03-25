@@ -27,6 +27,17 @@ namespace ALTC.Infra.Db.Memory.Cache.Repositories
             await Task.Run(() => _memoryCache.Set(cacheItem, cacheItemPolicy));
         }
 
+        public async Task CreateAsync<T>(string cacheName, T value, int hoursExpiration = 1)
+        {
+            if (string.IsNullOrEmpty(cacheName) || value is null) { return; }
+
+            _ = await Task.Run(() => _memoryCache.GetOrCreate(value,
+                              cacheEntry =>
+                              {
+                                  cacheEntry.SlidingExpiration = TimeSpan.FromHours(hoursExpiration);
+                                  return DateTime.Now;
+                              })); 
+        }
 
         public async Task<object?> GetAsync<T>(string cacheName)
         {
@@ -36,7 +47,6 @@ namespace ALTC.Infra.Db.Memory.Cache.Repositories
 
             return item;
         }
-
 
         public async Task<bool> RemoveAsync<T>(string cacheName)
         {

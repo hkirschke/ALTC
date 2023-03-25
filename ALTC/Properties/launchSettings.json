@@ -25,10 +25,15 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BASE_URL_JSON_PLACEHOLDER_API": "https://jsonplaceholder.typicode.com/"
       }
     },
     "Docker": {
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BASE_URL_JSON_PLACEHOLDER_API": "https://jsonplaceholder.typicode.com/"
+      },
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",

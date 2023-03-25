@@ -26,7 +26,7 @@ public sealed class JsonPlaceHolderService : IJsonPlaceHolderService
 
             if (usersModel is not null)
             {
-                await _cacheRepository.SetAsync(CacheNames.CACHE_NAME_ALL_USERS, usersModel);
+                await _cacheRepository.CreateAsync(CacheNames.CACHE_NAME_ALL_USERS, usersModel);
 
                 return (IList<UserModel>)usersModel;
             }
@@ -40,17 +40,17 @@ public sealed class JsonPlaceHolderService : IJsonPlaceHolderService
 
     public async Task<IList<PostModel>?> GetAllPostsAsync(CancellationToken cancellationToken)
     {
-        var postModel = await _cacheRepository.GetAsync<IList<UserModel>>(CacheNames.CACHE_NAME_ALL_POSTS);
+        var postModel = await _cacheRepository.GetAsync<IList<PostModel>>(CacheNames.CACHE_NAME_ALL_POSTS);
 
         if (postModel is null)
         {
-            postModel = await _jsonPlaceHolderProxy.GetAllUsersAsync(cancellationToken);
+            postModel = await _jsonPlaceHolderProxy.GetAllPostsAsync(cancellationToken);
 
             if (postModel is not null)
             {
-                await _cacheRepository.SetAsync(CacheNames.CACHE_NAME_ALL_USERS, postModel);
+                await _cacheRepository.CreateAsync(CacheNames.CACHE_NAME_ALL_POSTS, postModel);
 
-                return (IList<PostModel>)postModel;
+                return (List<PostModel>)postModel;
             }
 
             return null;

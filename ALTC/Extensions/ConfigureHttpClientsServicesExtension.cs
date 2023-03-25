@@ -10,7 +10,6 @@ public static class ConfigureHttpClientsServicesExtension
         CreateClient(HttpClientNames.JsonApi, Environment.GetEnvironmentVariable(EnvironmentVariables.BaseUrlJsonPlaceHolderApi), services);
     }
 
-
     private static void CreateClient(string name, string baseAdress, IServiceCollection services)
     {
         services.AddHttpClient(name, client =>

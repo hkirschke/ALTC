@@ -1,4 +1,6 @@
 using ALTC.Application.Interfaces.Infrastructures;
+using ALTC.Application.Interfaces.Services;
+using ALTC.Application.Services;
 using ALTC.Extensions;
 using ALTC.Infra.Db.Memory.Cache.Repositories;
 using ALTC.Infra.Json.API.Proxys;
@@ -16,6 +18,7 @@ builder.Services.ConfigureHttpClients();
 builder.Services.AddMemoryCache();
 builder.Services.AddAutoMapper(AssemblyUtil.GetAssemblies());
 builder.Services.AddScoped<ICacheRepository, MemoryCacheRepository>();
+builder.Services.AddScoped<IJsonPlaceHolderService, JsonPlaceHolderService>();
 builder.Services.AddScoped<IJsonPlaceHolderProxy, JsonPlaceHolderProxy>();
 
 var app = builder.Build();
