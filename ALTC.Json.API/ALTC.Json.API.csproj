@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Consts\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Proxys\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ALTC.Application\ALTC.Application.csproj" />
+  </ItemGroup>
+
+</Project>
