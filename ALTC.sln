@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC", "ALTC\ALTC.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC.Application", "ALTC.Application\ALTC.Application.csproj", "{0F9B36DB-D33A-48DA-AB31-6347089FD73C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC.Infra.Json.API", "ALTC.Json.API\ALTC.Infra.Json.API.csproj", "{730C2F41-95B8-4329-8561-49C4496FACB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC.Infra.JsonPlaceHolder.API", "ALTC.Json.API\ALTC.Infra.JsonPlaceHolder.API.csproj", "{730C2F41-95B8-4329-8561-49C4496FACB3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC.Tests", "ALTC.Tests\ALTC.Tests.csproj", "{FB395BA9-7A1D-4789-95A5-07A463E424C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC.Infra.Memory.Cache", "ALTC.Infra.Memory.Cache\ALTC.Infra.Memory.Cache.csproj", "{A5765A00-CBA6-40AB-AB3D-37A630366DF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2EE58174-23FE-44DF-A413-7E16AF4558BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{FB395BA9-7A1D-4789-95A5-07A463E424C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB395BA9-7A1D-4789-95A5-07A463E424C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB395BA9-7A1D-4789-95A5-07A463E424C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5765A00-CBA6-40AB-AB3D-37A630366DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5765A00-CBA6-40AB-AB3D-37A630366DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5765A00-CBA6-40AB-AB3D-37A630366DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5765A00-CBA6-40AB-AB3D-37A630366DF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
