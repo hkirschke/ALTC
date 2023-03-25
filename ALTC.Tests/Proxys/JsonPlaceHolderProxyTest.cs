@@ -33,7 +33,7 @@ public sealed class JsonPlaceHolderProxyTest
         //Act
         var service = new JsonPlaceHolderProxy(httpClientFactoryMock.Object, _mapperFixture.Object.Mapper);
 
-        var response = service.GetUsersAsync(CancellationToken.None);
+        var response = service.GetAllUsersAsync(CancellationToken.None);
 
         //Assert
         Assert.IsInstanceOfType(response, typeof(IList<UserModel>));
@@ -52,7 +52,7 @@ public sealed class JsonPlaceHolderProxyTest
         //Act
         var service = new JsonPlaceHolderProxy(httpClientFactoryMock.Object, _mapperFixture.Object.Mapper);
 
-        var response = service.GetPostsAsync(CancellationToken.None);
+        var response = service.GetAllPostsAsync(CancellationToken.None);
 
         //Assert
         Assert.IsInstanceOfType(response, typeof(IList<PostModel>));

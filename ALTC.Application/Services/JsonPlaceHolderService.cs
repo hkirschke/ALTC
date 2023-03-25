@@ -22,7 +22,7 @@ public sealed class JsonPlaceHolderService : IJsonPlaceHolderService
 
         if (usersModel is null)
         {
-            usersModel = await _jsonPlaceHolderProxy.GetUsersAsync(cancellationToken);
+            usersModel = await _jsonPlaceHolderProxy.GetAllUsersAsync(cancellationToken);
 
             if (usersModel is not null)
             {
@@ -44,7 +44,7 @@ public sealed class JsonPlaceHolderService : IJsonPlaceHolderService
 
         if (postModel is null)
         {
-            postModel = await _jsonPlaceHolderProxy.GetUsersAsync(cancellationToken);
+            postModel = await _jsonPlaceHolderProxy.GetAllUsersAsync(cancellationToken);
 
             if (postModel is not null)
             {

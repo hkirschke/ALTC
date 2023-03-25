@@ -19,8 +19,7 @@ public sealed class JsonPlaceHolderProxy : IJsonPlaceHolderProxy
         _mapper = mapper;
     }
 
-
-    public async Task<IList<UserModel>> GetUsersAsync(CancellationToken cancellationToken)
+    public async Task<IList<UserModel>> GetAllUsersAsync(CancellationToken cancellationToken)
     {
         var httpClient = _httpClientFactory.CreateClient(HttpClientNames.JsonApi);
 
@@ -38,7 +37,7 @@ public sealed class JsonPlaceHolderProxy : IJsonPlaceHolderProxy
     }
 
 
-    public async Task<IList<PostModel>> GetPostsAsync(CancellationToken cancellationToken)
+    public async Task<IList<PostModel>> GetAllPostsAsync(CancellationToken cancellationToken)
     {
         var httpClient = _httpClientFactory.CreateClient(HttpClientNames.JsonApi);
 
