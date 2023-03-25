@@ -1,6 +1,5 @@
 ﻿using ALTC.Application.Infrastructure;
 using ALTC.Utils;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace ALTC.Extensions;
 

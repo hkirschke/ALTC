@@ -1,19 +1,14 @@
 ﻿using ALTC.Application.Infrastructure;
+using ALTC.Application.Interfaces.Infrastructures;
 using ALTC.Application.Models;
 using ALTC.Infra.Json.API.Consts;
 using ALTC.Infra.Json.API.Dtos;
 using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace ALTC.Infra.Json.API.Proxys;
 
-public sealed class JsonPlaceHolderProxy
+public sealed class JsonPlaceHolderProxy : IJsonPlaceHolderProxy
 {
     private readonly IHttpClientFactory _httpClientFactory;
     private readonly IMapper _mapper;
@@ -22,9 +17,9 @@ public sealed class JsonPlaceHolderProxy
     {
         _httpClientFactory = httpClientFactory;
         _mapper = mapper;
-    } 
+    }
 
- 
+
     public async Task<IList<UserModel>> GetUsers(CancellationToken cancellationToken)
     {
         var httpClient = _httpClientFactory.CreateClient(HttpClientNames.JsonApi);
