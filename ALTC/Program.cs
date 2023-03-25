@@ -1,4 +1,6 @@
+using ALTC.Application.Interfaces.Infrastructures;
 using ALTC.Extensions;
+using ALTC.Infra.Db.Memory.Cache.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureHttpClients();
+builder.Services.AddMemoryCache();
+builder.Services.AddScoped<ICacheRepository, MemoryCacheRepository>();
 
 var app = builder.Build();
 

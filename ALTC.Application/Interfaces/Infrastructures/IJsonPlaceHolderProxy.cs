@@ -1,10 +1,10 @@
 ﻿using ALTC.Application.Models;
 
-namespace ALTC.Application.Interfaces.Infrastructures
+namespace ALTC.Application.Interfaces.Infrastructures;
+
+public interface IJsonPlaceHolderProxy
 {
-    public interface IJsonPlaceHolderProxy
-    {
-        Task<IList<PostModel>> GetPosts(CancellationToken cancellationToken);
-        Task<IList<UserModel>> GetUsers(CancellationToken cancellationToken);
-    }
+    Task<IList<PostModel>> GetPostsAsync(CancellationToken cancellationToken);
+
+    Task<IList<UserModel>> GetUsersAsync(CancellationToken cancellationToken);
 }

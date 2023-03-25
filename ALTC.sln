@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC.Infra.JsonPlaceHolder.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC.Tests", "ALTC.Tests\ALTC.Tests.csproj", "{FB395BA9-7A1D-4789-95A5-07A463E424C5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC.Infra.Memory.Cache", "ALTC.Infra.Memory.Cache\ALTC.Infra.Memory.Cache.csproj", "{A5765A00-CBA6-40AB-AB3D-37A630366DF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALTC.Infra.Db.Memory.Cache", "ALTC.Infra.Memory.Cache\ALTC.Infra.Db.Memory.Cache.csproj", "{A5765A00-CBA6-40AB-AB3D-37A630366DF4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2EE58174-23FE-44DF-A413-7E16AF4558BC}"
 EndProject

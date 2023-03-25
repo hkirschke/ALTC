@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ALTC.Application\ALTC.Application.csproj" />
+    <ProjectReference Include="..\ALTC.Infra.Memory.Cache\ALTC.Infra.Db.Memory.Cache.csproj" />
   </ItemGroup>
 
 </Project>
