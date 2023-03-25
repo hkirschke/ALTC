@@ -1,9 +1,6 @@
 using ALTC.Application.Interfaces.Infrastructures;
-using ALTC.Application.Interfaces.Services;
 using ALTC.Application.Models;
 using ALTC.Application.Services;
-using AutoFixture;
-using Moq;
 
 namespace ALTC.Tests.Services;
 
