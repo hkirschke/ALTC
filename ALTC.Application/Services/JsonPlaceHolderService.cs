@@ -16,7 +16,7 @@ public sealed class JsonPlaceHolderService : IJsonPlaceHolderService
         _cacheRepository = cacheRepository;
     }
 
-    public async Task<IList<UserModel>?> GetUsersAsync(CancellationToken cancellationToken)
+    public async Task<IList<UserModel>?> GetAllUsersAsync(CancellationToken cancellationToken)
     {
         var usersModel = await _cacheRepository.GetAsync<IList<UserModel>>(CacheNames.CACHE_NAME_ALL_USERS);
 
@@ -38,7 +38,7 @@ public sealed class JsonPlaceHolderService : IJsonPlaceHolderService
     }
 
 
-    public async Task<IList<PostModel>?> GetPostsAsync(CancellationToken cancellationToken)
+    public async Task<IList<PostModel>?> GetAllPostsAsync(CancellationToken cancellationToken)
     {
         var postModel = await _cacheRepository.GetAsync<IList<UserModel>>(CacheNames.CACHE_NAME_ALL_POSTS);
 

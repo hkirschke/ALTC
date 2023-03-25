@@ -4,9 +4,9 @@ namespace ALTC.Application.Interfaces.Services;
 
 public interface IJsonPlaceHolderService
 {
-    Task<IList<PostModel>?> GetPostsAsync(CancellationToken cancellationToken);
+    Task<IList<PostModel>?> GetAllPostsAsync(CancellationToken cancellationToken);
 
-    Task<IList<UserModel>?> GetUsersAsync(CancellationToken cancellationToken);
+    Task<IList<UserModel>?> GetAllUsersAsync(CancellationToken cancellationToken);
 
     Task RemovePostsAsync();
 

@@ -21,9 +21,9 @@ public class OdataController : ControllerBase
     [ProducesResponseType(typeof(IList<PostModel>), 200)]
     [ProducesResponseType(204)]
     [ProducesResponseType(500)]
-    public async Task<ActionResult<IList<PostModel>>> GetPosts(CancellationToken cancellationToken)
+    public async Task<ActionResult<IList<PostModel>>> GetAllPostsAsync(CancellationToken cancellationToken)
     {
-        return Ok(await _jsonPlaceHolderService.GetPostsAsync(cancellationToken));
+        return Ok(await _jsonPlaceHolderService.GetAllPostsAsync(cancellationToken));
     }
 
 
@@ -31,8 +31,8 @@ public class OdataController : ControllerBase
     [ProducesResponseType(typeof(IList<PostModel>), 200)]
     [ProducesResponseType(204)]
     [ProducesResponseType(500)]
-    public async Task<ActionResult<IList<UserModel>>> GetUsers(CancellationToken cancellationToken)
+    public async Task<ActionResult<IList<UserModel>>> GetAllUsersAsync(CancellationToken cancellationToken)
     {
-        return Ok(await _jsonPlaceHolderService.GetUsersAsync(cancellationToken));
+        return Ok(await _jsonPlaceHolderService.GetAllUsersAsync(cancellationToken));
     }
 }

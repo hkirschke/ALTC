@@ -31,7 +31,7 @@ public sealed class JsonPlaceHolderServiceTest
         //Act
         var service = new JsonPlaceHolderService(_jsonPlaceHolderProxyMock.Object, _cacheRepositoryMock.Object);
 
-        var response = await service.GetUsersAsync(CancellationToken.None);
+        var response = await service.GetAllUsersAsync(CancellationToken.None);
 
         //Assert
         Assert.IsInstanceOfType(response, typeof(IList<UserModel>));
@@ -50,7 +50,7 @@ public sealed class JsonPlaceHolderServiceTest
         //Act
         var service = new JsonPlaceHolderService(_jsonPlaceHolderProxyMock.Object, _cacheRepositoryMock.Object);
 
-        var response = await service.GetUsersAsync(CancellationToken.None);
+        var response = await service.GetAllUsersAsync(CancellationToken.None);
 
         //Assert
         Assert.IsInstanceOfType(response, typeof(IList<PostModel>));
