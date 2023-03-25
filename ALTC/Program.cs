@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.ConfigureHttpClients();
 builder.Services.AddMemoryCache();
 builder.Services.AddAutoMapper(AssemblyUtil.GetAssemblies());
-builder.Services.AddScoped<ICacheRepository, MemoryCacheRepository>();
+builder.Services.AddSingleton<ICacheRepository, MemoryCacheRepository>();
 builder.Services.AddScoped<IJsonPlaceHolderService, JsonPlaceHolderService>();
 builder.Services.AddScoped<IJsonPlaceHolderProxy, JsonPlaceHolderProxy>();
 
